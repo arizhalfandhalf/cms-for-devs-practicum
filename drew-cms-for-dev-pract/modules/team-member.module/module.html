@@ -12,12 +12,24 @@
 		 {% set loadingAttr = item.headshot.loading != 'disabled' ? 'loading="{{ item.headshot.loading }}"' : '' %}
 		<img src="{{ item.headshot.src }}" alt="{{ item.headshot.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
 	{% endif %}
-	{{ item.dev_lead }}
+    {% for item2 in item.dev_lead %}
+		{% set href = item2.project_link.url.href %}
+		{% if item2.project_link.url.type is equalto "EMAIL_ADDRESS" %}
+			{% set href = "mailto:" + href %}
+		{% endif %}
+        <li>
+		<a href="{{ href }}"
+			{% if item2.project_link.open_in_new_tab %}target="_blank"{% endif %}
+			{% if item2.project_link.rel %}rel="{{ item2.project_link.rel }}"{% endif %}
+			>
+			{{ item2.project_name }}
+		</a>
+        </li>
+	{% endfor %}
 	{% set ghref = item.github.url.href %}
 	{% if item.github.url.type is equalto "EMAIL_ADDRESS" %}
 		{% set ghref = "mailto:" + ghref %}
 	{% endif %}
-    <ul>
         <li>
 	<a href="{{ ghref }}"
 		{% if item.github.open_in_new_tab %}target="_blank"{% endif %}
@@ -32,7 +44,6 @@
         Email
     </a>
     </li>
-    </ul>
 
 {% endfor %}
 </div>

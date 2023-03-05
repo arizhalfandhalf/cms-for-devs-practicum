@@ -44,16 +44,53 @@
             }
         },
         {
-            "name": "dev_lead",
-            "label": "Dev Lead On Projects:",
+        "name": "dev_lead",
+        "label": "Dev Lead Projects",
+        "required": false,
+        "locked": false,
+        "occurrence": {
+          "min": 0,
+          "max": null,
+          "sorting_label_field": null,
+          "default": 0
+        },
+        "children": [
+            {
+            "name": "project_name",
+            "label": "Project Name",
             "required": false,
             "locked": false,
-            "children": [],
-            "type": "group",
+            "validation_regex": "",
+            "allow_new_line": false,
+            "show_emoji_picker": false,
+            "type": "text",
+            "placeholder": "",
             "inline_help_text": "",
             "help_text": "",
-            "default": {}
-        },
+            "default": "Project" },
+            {
+            "name" : "project_link",
+            "label" : "Project Link",
+            "required" : false,
+            "locked" : false,
+            "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+            "type" : "link",
+            "inline_help_text": "",
+            "help_text": "Link to project that this team member is dev lead on",
+            "default" : {
+              "url" : {
+                "content_id" : null,
+                "type" : "EXTERNAL",
+                "href" : "https://app.hubspot.com/contacts/100473/objects/2-1087659/views/8709990/list"
+              },
+              "open_in_new_tab" : true,
+              "no_follow" : false
+            } }
+        ],
+        "type": "group",
+        "inline_help_text": "",
+        "help_text": "",
+        "default": [] },
         {
                 "name": "github",
                 "label": "Github Link",
