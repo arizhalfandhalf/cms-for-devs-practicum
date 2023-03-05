@@ -8,7 +8,7 @@
       "min": 1,
       "max": null,
       "sorting_label_field": null,
-      "default": null
+      "default": 1
     },
     "children": [
         {
@@ -55,11 +55,6 @@
             "default": {}
         },
         {
-            "name": "contact",
-            "label": "Contact Info",
-            "required": false,
-            "locked": false,
-            "children": [{
                 "name": "github",
                 "label": "Github Link",
                 "required": false,
@@ -72,7 +67,7 @@
                     "url": {
                         "content_id": null,
                         "type": "EXTERNAL",
-                        "href": ""
+                        "href": "https://www.github.com"
                     },
                     "open_in_new_tab": true,
                     "no_follow": false
@@ -85,14 +80,9 @@
                 "inline_help_text": "",
                 "help_text": "",
                 "type": "email",
-                "placeholder": "",
+                "placeholder": "example@address.com",
                 "default": null
-            }],
-            "type": "group",
-            "inline_help_text": "",
-            "help_text": "",
-            "default": {}
-        }
+            }
     ],
     "type": "group",
     "inline_help_text": "",
