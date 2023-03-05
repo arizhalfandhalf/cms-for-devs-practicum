@@ -17,20 +17,15 @@
   {% dnd_section
     vertical_alignment="TOP"
   %}
-    {% dnd_module
-      path="@hubspot/linked_image",
-      img={
-        "alt": "Coworkers sitting together and smiling outside.",
-        "loading": "disabled",
-        "max_height": 449,
-        "max_width": 605,
-        "size_type": "auto_custom_max",
-        "src": get_asset_url("../images/team-image.jpg")
-      },
-      offset=0,
-      width=6
-    %}
-    {% end_dnd_module %}
+  {%dnd_column%}
+    {%dnd_row%}
+  {% dnd_module
+    path='/drew-pract/modules/team-member',
+    label="Team Members"
+  %}
+  {% end_dnd_module %}
+  {%end_dnd_row%}
+  {%dnd_row%}
     {% dnd_module
       path="@hubspot/rich_text",
       html="<h1>Meet our team</h1><p>Use this page to help your visitors learn more about you. Include images so that folks will recognize you at conferences and events.</p>"
@@ -38,6 +33,8 @@
       width=6
     %}
     {% end_dnd_module %}
+  {%end_dnd_row%}
+  {%end_dnd_column%}
   {% end_dnd_section %}
   
 

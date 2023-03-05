@@ -1,7 +1,7 @@
 [
     {
     "name": "team_member",
-    "label": "Team Member",
+    "label": "Team Members",
     "required": false,
     "locked": false,
     "occurrence": {
@@ -52,7 +52,7 @@
           "min": 0,
           "max": null,
           "sorting_label_field": null,
-          "default": 0
+          "default": 1
         },
         "children": [
             {
@@ -123,6 +123,6 @@
     ],
     "type": "group",
     "inline_help_text": "",
-    "help_text": "",
-    "default": [] }
+    "help_text": "The information for a team member"
+    }
 ]
