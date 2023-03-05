@@ -3,24 +3,18 @@
   label: Footer
 -->
 <footer class="footer">
+  {% module "header" path="@hubspot/header" label="Footer Header" value="Quick Reference" %}
+  {% module "module_16780494638771" path="../../modules/content-expander", label="content-expander" %}
+
+
   {% dnd_area "footer"
     label="Footer",
     class="footer__container content-wrapper"
   %}
-  {% module "header" path="@hubspot/header" label="Footer Header" value="Quick Reference" %}
     {# Social follow and copyright #}
 
     {% dnd_section %}
       {% dnd_column %}
-        {%dnd_row%}
-          {%dnd_column%}
-            {%dnd_module
-              path="../../modules/content-expander"
-              label="Footer Content 1"
-            %}
-          {%end_dnd_module%}
-          {%end_dnd_column%}
-        {%end_dnd_row%}
         {% dnd_row
           margin={
             "top": 12,
