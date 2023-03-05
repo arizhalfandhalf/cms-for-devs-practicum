@@ -1,11 +1,83 @@
-[
-  {
-    "default": "<h1>Hello, world!</h1>",
-    "label": "Rich text field",
-    "locked": false,
-    "name": "text",
-    "required": false,
-    "type": "richtext",
-    "validation_regex": ""
-  }
+[{
+        "name": "team_member_name",
+        "label": "Name",
+        "required": true,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "placeholder": "First Name Last Name",
+        "inline_help_text": "",
+        "help_text": "",
+        "default": null
+    },
+    {
+        "name": "headshot",
+        "label": "Headshot",
+        "required": false,
+        "locked": false,
+        "inline_help_text": "",
+        "help_text": "A picture of the team member",
+        "responsive": true,
+        "resizable": true,
+        "show_loading": false,
+        "type": "image",
+        "default": {
+            "size_type": "auto",
+            "src": "",
+            "alt": null,
+            "loading": "disabled"
+        }
+    },
+    {
+        "name": "dev_lead",
+        "label": "Dev Lead On Projects:",
+        "required": false,
+        "locked": false,
+        "children": [],
+        "type": "group",
+        "inline_help_text": "",
+        "help_text": "",
+        "default": {}
+    },
+    {
+        "name": "contact",
+        "label": "Contact Info",
+        "required": false,
+        "locked": false,
+        "children": [{
+            "name": "github",
+            "label": "Github Link",
+            "required": false,
+            "locked": false,
+            "supported_types": ["EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG"],
+            "type": "link",
+            "inline_help_text": "",
+            "help_text": "",
+            "default": {
+                "url": {
+                    "content_id": null,
+                    "type": "EXTERNAL",
+                    "href": ""
+                },
+                "open_in_new_tab": true,
+                "no_follow": false
+            }
+        }, {
+            "name": "email_field",
+            "label": "Email Address Field",
+            "required": false,
+            "locked": false,
+            "inline_help_text": "",
+            "help_text": "",
+            "type": "email",
+            "placeholder": "",
+            "default": null
+        }],
+        "type": "group",
+        "inline_help_text": "",
+        "help_text": "",
+        "default": {}
+    }
 ]
