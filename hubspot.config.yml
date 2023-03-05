@@ -1,4 +1,4 @@
-defaultPortal: drew-cms-for-dev-pract
+defaultPortal: drew-dev-pract
 portals:
   - name: drew-cms-for-dev-pract
     portalId: 6089181
@@ -12,3 +12,13 @@ portals:
       CiQyYmNmYjM4Ny1iOWY2LTQ4MWYtODdkMi05YTU2M2RhNDBkMDgQ3dPzAhj94CsqGQAF5pGCd0B-tg0_MezaKCPLumKVXj1vwBlKA25hMQ
     sandboxAccountType: null
     parentAccountId: null
+  - name: drew-dev-pract
+    portalId: 20518873
+    authType: personalaccesskey
+    auth:
+      tokenInfo:
+        accessToken: >-
+          CO-KrJvrMBILAA0AAAAA4E0AQAIY2a_kCSD94Cso7ukMMhSvWJ9KaaUyLaTJGIk5JsMb2AFeKTooAAAEQQAAAHgAAAAAAAAAAAAAAAAAAAAEAADABwD-_zE8AEAAAEQAYEIUPAPIiOBMXhjrsvGYkc3EyHToiEhKA25hMVIAWgA
+        expiresAt: '2023-03-05T20:16:20.848Z'
+    personalAccessKey: >-
+      CiQ4NzcyOTFkYi0xNDE2LTRmZjgtYmM1ZC1kOGQxMmQyMTUxZjkQ2a_kCRj94CsqGQAF5pGCoXAjdeXfnBryPAAbij3lEZYem2JKA25hMQ
