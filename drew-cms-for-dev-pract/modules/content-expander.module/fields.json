@@ -19,5 +19,15 @@
         "name": "text",
         "required": true,
         "type": "richtext"
+    },
+    {
+        "name": "active",
+        "label": "Active",
+        "required": false,
+        "locked": false,
+        "type": "boolean",
+        "inline_help_text": "",
+        "help_text": "By selecting this, this will be open when the page loads",
+        "default": false
     }
 ]
