@@ -7,29 +7,40 @@
 {% extends "./layouts/base.html" %}
 
 {% block body %}
-{% dnd_area "dnd_area"
+  {% dnd_area "dnd_area"
   label="Main section",
   class="body-container body-container--about"
 %}
 
   {# Two column image left #}
 
-  {% dnd_section %}
-  {%dnd_column%}
-      {# Put Team Members Module here when making page #}
-  {%dnd_row%}
+  {% dnd_section
+    vertical_alignment="TOP"
+  %}
+    {% dnd_module
+      path="@hubspot/linked_image",
+      label="Feature Image"
+      img={
+        "alt": "Feature Image",
+        "loading": "disabled",
+        "max_height": 449,
+        "max_width": 605,
+        "size_type": "auto_custom_max",
+        "src": get_asset_url("")
+      },
+      offset=0,
+      width=2
+    %}
+    {% end_dnd_module %}
     {% dnd_module
       path="@hubspot/rich_text",
-      html="<h1>Meet our team</h1><p>Use this page to help your visitors learn more about you. Include images so that folks will recognize you at conferences and events.</p>"
-      offset=6,
-      width=6
+      html="<h2>Development Standards</h2>"
+      offset=2,
+      width=10
     %}
-  {%end_dnd_module%}
-  
-  {%end_dnd_row%}
-  {%end_dnd_column%}
+    {% end_dnd_module %}
+    {# Put Team module here #}
   {% end_dnd_section %}
-  
 
 {% end_dnd_area %}
 {% endblock body %}
