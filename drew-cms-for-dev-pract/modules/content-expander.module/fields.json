@@ -7,12 +7,10 @@
         "default": "Content Headline",
         "placeholder": "Content Headline",
         "help_text": "A descriptive title for the content contained in this expander",
-        "visibility": null,
         "required": true
     },
     {
-        "default": "<h1>Hello, world!</h1>",
-        "display_width": null,
+        "default": "<p>Hello, world!</p>",
         "id": "text",
         "label": "Rich text field",
         "locked": false,
