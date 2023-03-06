@@ -8,9 +8,9 @@
 
 {% block body %}
   {% dnd_area "dnd_area"
-  label="Main section",
-  class="body-container body-container--about"
-%}
+    label="Main section",
+    class="body-container body-container--about"
+  %}
 
   {# Two column image left #}
 
@@ -21,7 +21,7 @@
     {% dnd_row %}
       {% dnd_module
         path="@hubspot/linked_image",
-        label="Feature Image"
+        label="Headline Image"
         img={
           "alt": "Feature Image",
           "loading": "disabled",
@@ -36,14 +36,17 @@
       {% end_dnd_module %}
       {% dnd_module
         path="@hubspot/rich_text",
-        html="<h2>Development Standards</h2>"
+        html="<h2>Technical Roster</h2><p>A list of Lift Developers and links to relevant resources</p>"
         offset=2,
         width=10
       %}
       {% end_dnd_module %}
     {% end_dnd_row %}
     {% dnd_row %}
-      {% dnd_module  path="/drew-pract/modules/team-member", label="team-member" %}
+      {% dnd_module  
+        path="/drew-pract/modules/team-member", 
+        label="Team Members"
+      %}
       {% end_dnd_module %}
     {% end_dnd_row %}
   {% end_dnd_column %}
