@@ -1,1 +1,11 @@
-[]
+[{
+    "name" : "accent_color",
+    "label" : "Accent color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+       "color" : "#ff0000",
+       "opacity" : 100
+    }
+}]
