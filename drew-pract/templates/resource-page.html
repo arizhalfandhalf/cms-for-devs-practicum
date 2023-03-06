@@ -1,0 +1,57 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Dev Resources Page
+  screenshotPath: ../images/resource-page.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  {% dnd_area "dnd_area"
+    label="Main section",
+    class="body-container body-container--about"
+  %}
+
+  {# Two column image left #}
+
+  {% dnd_section
+    vertical_alignment="TOP"
+  %}
+  {% dnd_column%}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/linked_image",
+        label="Headline Image"
+        img={
+          "alt": "Feature Image",
+          "loading": "disabled",
+          "max_height": 449,
+          "max_width": 605,
+          "size_type": "auto_custom_max",
+          "src": get_asset_url("")
+        },
+        offset=0,
+        width=2
+      %}
+      {% end_dnd_module %}
+      {% dnd_module
+        path="@hubspot/rich_text",
+        html="<h2>Technical Roster</h2><p>A list of Lift Developers and links to relevant resources</p>"
+        offset=2,
+        width=10
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module  
+        path="/drew-pract/modules/team-member", 
+        label="Team Members"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+    
+  {% end_dnd_section %}
+
+{% end_dnd_area %}
+{% endblock body %}

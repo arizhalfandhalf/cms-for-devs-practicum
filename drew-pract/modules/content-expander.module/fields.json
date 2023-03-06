@@ -1,0 +1,33 @@
+[{
+        "type": "text",
+        "id": "eab7dfd1-897d-5ba9-b00f-d64616eea9cc",
+        "validation_regex": "",
+        "label": "Title",
+        "name": "title",
+        "default": "Content Headline",
+        "placeholder": "Content Headline",
+        "help_text": "A descriptive title for the content contained in this expander",
+        "visibility": null,
+        "required": true
+    },
+    {
+        "default": "<h1>Hello, world!</h1>",
+        "display_width": null,
+        "id": "text",
+        "label": "Rich text field",
+        "locked": false,
+        "name": "text",
+        "required": true,
+        "type": "richtext"
+    },
+    {
+        "name": "active",
+        "label": "Active",
+        "required": false,
+        "locked": false,
+        "type": "boolean",
+        "inline_help_text": "",
+        "help_text": "By selecting this, this will be open when the page loads",
+        "default": false
+    }
+]
