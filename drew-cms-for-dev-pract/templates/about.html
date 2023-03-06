@@ -14,13 +14,9 @@
 
   {# Two column image left #}
 
-  {% dnd_section
-    vertical_alignment="TOP"
-  %}
+  {% dnd_section %}
   {%dnd_column%}
-    {%dnd_row%}
       {# Put Team Members Module here when making page #}
-  {%end_dnd_row%}
   {%dnd_row%}
     {% dnd_module
       path="@hubspot/rich_text",
@@ -28,7 +24,8 @@
       offset=6,
       width=6
     %}
-    {% end_dnd_module %}
+  {%end_dnd_module%}
+  
   {%end_dnd_row%}
   {%end_dnd_column%}
   {% end_dnd_section %}
