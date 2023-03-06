@@ -1,52 +1,53 @@
 <!-- module html  -->
 <div class="team-members">
 {% for item in module.team_member %}
-	{% inline_text field="team_member_name" value="{{ item.team_member_name }}" %}
-	{% if item.headshot.src %}
-		{% set sizeAttrs = 'width="{{ item.headshot.width }}" height="{{ item.headshot.height }}"' %}
-		{% if item.headshot.size_type == 'auto' %}
-			{% set sizeAttrs = 'width="{{ item.headshot.width }}" height="{{ item.headshot.height }}" style="max-width: 100%; height: auto;"' %}
-		{% elif item.headshot.size_type == 'auto_custom_max' %}
-			{% set sizeAttrs = 'width="{{ item.headshot.max_width }}" height="{{ item.headshot.max_height }}" style="max-width: 100%; height: auto;"' %}
-		{% endif %}
-		 {% set loadingAttr = item.headshot.loading != 'disabled' ? 'loading="{{ item.headshot.loading }}"' : '' %}
-		<img src="{{ item.headshot.src }}" alt="{{ item.headshot.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
-	{% endif %}
-    <p>Dev Lead Projects: </p>
-    {% for item2 in item.dev_lead %}
-		{% set href = item2.project_link.url.href %}
-		{% if item2.project_link.url.type is equalto "EMAIL_ADDRESS" %}
-			{% set href = "mailto:" + href %}
-		{% endif %}
-        <li>
-		<a href="{{ href }}"
-			{% if item2.project_link.open_in_new_tab %}target="_blank"{% endif %}
-			{% if item2.project_link.rel %}rel="{{ item2.project_link.rel }}"{% endif %}
-			>
-			{{ item2.project_name }}
-		</a>
+    <div class="team-member">
+        {% inline_text field="team_member_name" value="{{ item.team_member_name }}" %}
+        {% if item.headshot.src %}
+            {% set sizeAttrs = 'width="{{ item.headshot.width }}" height="{{ item.headshot.height }}"' %}
+            {% if item.headshot.size_type == 'auto' %}
+                {% set sizeAttrs = 'width="{{ item.headshot.width }}" height="{{ item.headshot.height }}" style="max-width: 100%; height: auto;"' %}
+            {% elif item.headshot.size_type == 'auto_custom_max' %}
+                {% set sizeAttrs = 'width="{{ item.headshot.max_width }}" height="{{ item.headshot.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = item.headshot.loading != 'disabled' ? 'loading="{{ item.headshot.loading }}"' : '' %}
+            <img src="{{ item.headshot.src }}" alt="{{ item.headshot.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        {% endif %}
+        <p>Dev Lead Projects: </p>
+        {% for item2 in item.dev_lead %}
+            {% set href = item2.project_link.url.href %}
+            {% if item2.project_link.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+            {% endif %}
+            <li>
+            <a href="{{ href }}"
+                {% if item2.project_link.open_in_new_tab %}target="_blank"{% endif %}
+                {% if item2.project_link.rel %}rel="{{ item2.project_link.rel }}"{% endif %}
+                >
+                {{ item2.project_name }}
+            </a>
+            </li>
+        {% endfor %}
+        {% set ghref = item.github.url.href %}
+        {% if item.github.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set ghref = "mailto:" + ghref %}
+        {% endif %}
+        <p></p>
+        <p>Contact Info:</p>
+            <li>
+        <a href="{{ ghref }}"
+            {% if item.github.open_in_new_tab %}target="_blank"{% endif %}
+            {% if item.github.rel %}rel="{{ item.github.rel }}"{% endif %}
+            >
+            Github
+        </a>
         </li>
-	{% endfor %}
-	{% set ghref = item.github.url.href %}
-	{% if item.github.url.type is equalto "EMAIL_ADDRESS" %}
-		{% set ghref = "mailto:" + ghref %}
-	{% endif %}
-    <p></p>
-    <p>Contact Info:</p>
         <li>
-	<a href="{{ ghref }}"
-		{% if item.github.open_in_new_tab %}target="_blank"{% endif %}
-		{% if item.github.rel %}rel="{{ item.github.rel }}"{% endif %}
-		>
-		Github
-	</a>
-    </li>
-    <li>
-    {%set mhref = item.email_field.default[0] %}
-    <a href="{{mhref}}">
-        Email
-    </a>
-    </li>
-
+        {%set mhref = item.email_field.default[0] %}
+        <a href="{{mhref}}">
+            Email
+        </a>
+        </li>
+    </div>
 {% endfor %}
 </div>

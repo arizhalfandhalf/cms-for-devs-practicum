@@ -1,0 +1,7 @@
+.team-members {
+    display: flex;
+}
+
+.team-member {
+    float: left;
+}
