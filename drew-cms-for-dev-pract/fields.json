@@ -1,11 +1,32 @@
 [{
-    "name" : "accent_color",
-    "label" : "Accent color",
-    "required" : false,
-    "locked" : false,
-    "type" : "color",
-    "default" : {
-       "color" : "#ff0000",
-       "opacity" : 100
+    "name": "accent_color",
+    "label": "Accent color",
+    "required": false,
+    "locked": false,
+    "type": "color",
+    "default": {
+        "color": "#ff0000",
+        "opacity": 100
+    }
+}, {
+    "name": "font",
+    "label": "Font",
+    "required": false,
+    "locked": false,
+    "load_external_fonts": true,
+    "type": "font",
+    "default": {
+        "size": 12,
+        "font": "Merriweather",
+        "font_set": "GOOGLE",
+        "size_unit": "px",
+        "color": "#000",
+        "styles": {}
+    },
+    "visibility": {
+        "hidden_subfields": {
+            "font": true,
+            "size": true
+        }
     }
 }]
