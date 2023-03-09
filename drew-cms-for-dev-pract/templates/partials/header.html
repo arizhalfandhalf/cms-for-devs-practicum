@@ -4,15 +4,6 @@
 -->
 <header class="header">
 
-
-  {# Top header drag and drop area #}
-
-  {% dnd_area "header-top"
-    label="Top header",
-    class="content-wrapper"
-  %}
-  {% end_dnd_area %}
-
   {# Header #}
 
   <div class="header_container content-wrapper">
@@ -23,31 +14,21 @@
       {% module "site_logo" path="@hubspot/logo" %}
     </div>
 
-    {# Header navigation column #}
-
-    <div class="header_column">
-
-      {# Header navigation row #}
-
-      <div class="header_nav">
-        <div class="header_navigation header--element">
-          {% module "navigation-primary"
-            path="../../modules/menu",
-            label="Primary navigation"
-          %}
-        </div>
-      </div>
-
-    </div>
-
   </div>
 
-  {# Bottom header drag and drop area #}
+  {# Header drag and drop area #}
 
-  {% dnd_area "header-bottom"
-    label="Bottom header",
-    class="content-wrapper"
-  %}
+  {% dnd_area "header_content" %}
+      {% dnd_section %}
+        {% dnd_module
+          path='@hubspot/rich_text'
+        %}
+          {% module_attribute 'header_quote' %}
+            <h4>"If you aren't entirely embarassed by the first version of your product, you released too late</h4>
+            <p>-Reid Hoffman</p>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
   {% end_dnd_area %}
 
 </header>
