@@ -9,7 +9,7 @@
     width: 33%;
 }
 
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
     .team-member {
         width: 50%;
     }
