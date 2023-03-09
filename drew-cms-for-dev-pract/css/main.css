@@ -145,7 +145,8 @@ body {
 .header_container {
   display: flex;
   justify-content: space-between;
-  background: {{ theme.accent_color || '#FF0000'}}
+  background: {{ theme.accent_color || '#FF0000'}};
+  font: {{ theme.font || 'Arial' }};
 }
 
 

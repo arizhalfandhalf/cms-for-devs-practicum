@@ -18,15 +18,12 @@
 
   {# Header drag and drop area #}
 
-  {% dnd_area "header_content" %}
+  {% dnd_area "header_content" class="header_content" %}
       {% dnd_section %}
         {% dnd_module
           path='@hubspot/rich_text'
+          html='<h4>"If you aren\'t entirely embarassed by the first version of your product, you released too late"</h4><p>-Reid Hoffman</p>'
         %}
-          {% module_attribute 'header_quote' %}
-            <h4>"If you aren't entirely embarassed by the first version of your product, you released too late</h4>
-            <p>-Reid Hoffman</p>
-          {% end_module_attribute %}
         {% end_dnd_module %}
       {% end_dnd_section %}
   {% end_dnd_area %}
