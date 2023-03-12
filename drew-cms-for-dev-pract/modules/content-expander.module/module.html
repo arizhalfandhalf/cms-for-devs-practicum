@@ -1,6 +1,5 @@
 <!-- module html  -->
 <div class="content_expander">
-	<input type="checkbox" {% if module.active %}checked{%endif%} />
-	{% inline_text field="title" value="{{ module.title }}" %}
+	<h3>{{ module.title }}</h3>
 	{% inline_rich_text field="text" value="{{ module.text }}" %}
 </div>
