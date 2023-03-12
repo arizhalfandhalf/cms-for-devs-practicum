@@ -138,6 +138,9 @@ body {
 
 .header .footer .dnd-section {
   padding: 0;
+}
+
+.hf_partial_content {
   background-color: {{ theme.accent_color }};
   font-family: {{ theme.font }};
 }

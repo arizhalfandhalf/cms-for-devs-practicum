@@ -5,27 +5,27 @@
 <header class="header">
 
   {# Header #}
+  <div class="hf_partial_content">
+    <div class="header_container content-wrapper">
 
-  <div class="header_container content-wrapper">
+      {# Header logo column #}
 
-    {# Header logo column #}
+      <div class="header_logo header_logo--main">
+        {% module "site_logo" path="@hubspot/logo" %}
+      </div>
 
-    <div class="header_logo header_logo--main">
-      {% module "site_logo" path="@hubspot/logo" %}
     </div>
 
+    {# Header drag and drop area #}
+
+    {% dnd_area "header_content" %}
+        {% dnd_section %}
+          {% dnd_module
+            path='@hubspot/rich_text'
+            html='<h4>"If you aren\'t entirely embarassed by the first version of your product, you released too late"</h4><p>-Reid Hoffman</p>'
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_section %}
+    {% end_dnd_area %}
   </div>
-
-  {# Header drag and drop area #}
-
-  {% dnd_area "header_content" class="header_content" %}
-      {% dnd_section %}
-        {% dnd_module
-          path='@hubspot/rich_text'
-          html='<h4>"If you aren\'t entirely embarassed by the first version of your product, you released too late"</h4><p>-Reid Hoffman</p>'
-        %}
-        {% end_dnd_module %}
-      {% end_dnd_section %}
-  {% end_dnd_area %}
-
 </header>
