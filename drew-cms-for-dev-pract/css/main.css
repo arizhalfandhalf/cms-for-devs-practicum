@@ -132,12 +132,14 @@ body {
 */
 
 /*
-  Header Styling
+  Header & Footer Styling
 */
-/* Header DND sections */
+/* Header & Footer DND sections */
 
-.header .dnd-section {
+.header .footer .dnd-section {
   padding: 0;
+  background-color: {{ theme.accent_color }};
+  font-family: {{ theme.font }};
 }
 
 /* Header container */
@@ -145,8 +147,6 @@ body {
 .header_container {
   display: flex;
   justify-content: space-between;
-  background: {{ theme.accent_color || '#FF0000'}};
-  font: {{ theme.font || 'Arial' }};
 }
 
 
