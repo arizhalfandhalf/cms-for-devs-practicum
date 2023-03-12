@@ -38,7 +38,7 @@
             "type": "image",
             "default": {
                 "size_type": "auto",
-                "src": "",
+                "src": "../../images/dev-headshot-default.png",
                 "alt": null,
                 "loading": "disabled"
             }

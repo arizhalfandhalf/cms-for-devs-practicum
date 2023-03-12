@@ -21,6 +21,7 @@
 
 body {
   overflow-wrap: break-word;
+  {{ theme.font.style }}
 }
 
 /*
@@ -141,8 +142,8 @@ body {
 }
 
 .hf_partial_content {
-  background-color: {{ theme.accent_color }};
-  font-family: {{ theme.font }};
+  background-color: {{ theme.accent_color.css }};
+  {{ theme.font.style }};
 }
 
 /* Header container */
