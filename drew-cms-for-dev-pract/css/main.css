@@ -21,7 +21,10 @@
 
 body {
   overflow-wrap: break-word;
-  {{ theme.font.style }}
+}
+
+.body-container-wrapper {
+  {{ theme.body_font.style }}
 }
 
 /*
@@ -143,7 +146,7 @@ body {
 
 .hf_partial_content {
   background-color: {{ theme.accent_color.css }};
-  {{ theme.font.style }};
+  {{ theme.partials_font.style }};
 }
 
 /* Header container */
@@ -175,7 +178,7 @@ body {
     padding: 1rem;
   }
 
-  /* Logo */
+/* Logo */
 
 .header_logo {
   align-items: center;
@@ -196,6 +199,7 @@ body {
 .header_logo img {
   max-width: 100%;
 }
+
 
 /* image module styles */
 

@@ -9,7 +9,28 @@
         "opacity": 100
     }
 }, {
-    "name": "font",
+    "name": "partials_font",
+    "label": "Font",
+    "required": false,
+    "locked": false,
+    "load_external_fonts": true,
+    "type": "font",
+    "default": {
+        "size": 12,
+        "font": "Merriweather",
+        "font_set": "GOOGLE",
+        "size_unit": "px",
+        "color": "#000",
+        "styles": {}
+    },
+    "visibility": {
+        "hidden_subfields": {
+            "font": true,
+            "size": true
+        }
+    }
+},{
+    "name": "body_font",
     "label": "Font",
     "required": false,
     "locked": false,
