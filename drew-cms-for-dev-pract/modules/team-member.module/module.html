@@ -2,7 +2,7 @@
 <div class="team-members">
 {% for item in module.team_member %}
     <div class="team-member">
-        {% inline_text field="team_member_name" value="{{ item.team_member_name }}" %}
+        <h3>{{ item.team_member_name }}</h3>
         {% if item.headshot.src %}
             {% set sizeAttrs = 'width="{{ item.headshot.width }}" height="{{ item.headshot.height }}"' %}
             {% if item.headshot.size_type == 'auto' %}
