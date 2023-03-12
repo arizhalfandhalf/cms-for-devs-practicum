@@ -4,8 +4,6 @@
 -->
 <footer class="footer">
   <div class="hf_partial_content">
-    {% module "header" path="@hubspot/header" label="Footer Header" value="Quick Reference" %}
-
 
     {% dnd_area "footer"
       label="Footer",
@@ -16,8 +14,12 @@
       {% dnd_section %}
         {% dnd_column %}
           {%dnd_row%}
-            {% dnd_module path="../../modules/content-expander", label="content-expander" %}
-            {%end_dnd_module%}
+            {% dnd_module 'footer_content'
+              path='@hubspot/rich_text',
+              html='<p>Lift Enablement</p>'
+            %}
+            
+            {% end_dnd_module %}
           {%end_dnd_row%}
           {% dnd_row %}
             {% dnd_module
